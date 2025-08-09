@@ -1,0 +1,31 @@
+
+---
+import ExperiencieItems from "./ExperiencieItems.astro"
+
+const experiences = [
+    {
+        title: "IES Simarro (Xativa)",
+
+        description: "Desarrollo de Aplicaciones Multiplataforma (Grado Superior).",   
+        date: "Septiembre 2023 - Junio 2025",
+    },
+    {
+        title: "Curso Profesional para Desarrolladores en Oracle Cloud Infrastructure",
+        description: "Utilizar los servicios de OCI para desarrollar, implementar y gestionar con tecnologia Cloud Native.",
+        date: "Abril 2025",
+    },
+    
+]
+---
+<ol class="relative border-s border-gray-200 ml-3">      
+    {
+        experiences.map((experience) => (
+            <li class="mb-10 ms-4">
+                <ExperiencieItems {...experience} />
+            </li>
+        ))
+    
+    }            
+   
+</ol>
+

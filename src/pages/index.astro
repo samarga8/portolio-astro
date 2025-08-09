@@ -1,11 +1,106 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Badge from "../components/Badge.astro";
+import Contact from "../components/Contact.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefCase from "../icons/BriefCase.astro";
+import CursorIcon from "../icons/CursorIcon.astro";
+import JavaIcon from "../icons/JavaIcon.astro";
+import KotlinIcon from "../icons/KotlinIcon.astro";
+import Mail from "../icons/Mail.astro";
+import MySQLIcon from "../icons/MySQLIcon.astro";
+import SpringIcon from "../icons/SpringIcon.astro";
+import StripeIcon from "../icons/StripeIcon.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Portfolio de Salva - Desarrollador y Programador web">
+  <main class="text-white px-4">
+    <SectionContainer>
+      <img
+        class="rounded-full size-40"
+        src="/foto_nav.jpg"
+        alt="Foto de perfil"
+      />
+
+      <div class="flex items-center justify-center gap-4 text-center">
+        <h1 class="text-4xl font-bold md:text-4xl">Hola, soy Salva</h1>
+
+        <a
+          href="https://www.linkedin.com/in/salva-dev/"
+          target="_blank"
+          rel="noopener"
+        >
+          <Badge>Visita mi LinkedIn</Badge>
+        </a>
+      </div>
+    </SectionContainer>
+
+    <SectionContainer id="about">
+      <p>
+        Desarrollador Junior Backend especializado en Desarrollo de Aplicaciones
+        Multiplataforma. Soy una persona autodidacta, responsable y comprometida
+        con mi trabajo.
+      </p>
+      <p class="mt-4">
+        A lo largo de mi formación y proyectos personales, he trabajado tanto en
+        el lado del servidor como con bases de datos, integraciones de APIs y
+        desarrollo de lógica de negocio. Me gusta colaborar en equipo, aprender
+        cosas nuevas constantemente y mejorar mis habilidades día a día.
+      </p>
+
+      <nav class="flex flex-wrap gap-14 justify-center mt-8">
+        <div class="flex flex-col items-center gap-2">
+          <JavaIcon class="size14 text-blue-500" />
+          <span class="text-white text-sm">Java</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <SpringIcon class="size-14 text-green-500" />
+          <span class="text-white text-sm">Spring</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <MySQLIcon class="size-14 text-sky-500" />
+          <span class="text-white text-sm">MySQL</span>
+        </div>
+        
+        <div class="flex flex-col items-center gap-2">
+          <StripeIcon class="size-14 text-indigo-500" />
+          <span class="text-white text-sm">Stripe</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <CursorIcon class="size-14 text-white" />
+          <span class="text-white text-sm">Cursor</span>
+        </div>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experience">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefCase class="size-7" />
+        Mi formación
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefCase class="size-7" />
+        Mis proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="contact">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Mail class="size-7" />
+        Contacto
+      </h2>
+      <p class="text-pretty mb-6 text-center">
+        Si estás interesado en mi perfil o tienes alguna pregunta, no dudes en contactarme.
+        Estaré encantado de hablar contigo.
+      </p>
+      <Contact />
+    </SectionContainer>
+  </main>
 </Layout>

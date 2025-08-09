@@ -1,0 +1,147 @@
+---
+
+import CssIcon from "../icons/CssIcon.astro";
+import CursorIcon from "../icons/CursorIcon.astro";
+import GitHubIcon from "../icons/GitHubIcon.astro";
+import HtmlIcon from "../icons/HtmlIcon.astro";
+import JavaScriptIcon from "../icons/JavaScriptIcon.astro";
+import PhpIcon from "../icons/PhpIcon.astro";
+import ReactIcon from "../icons/ReactIcon.astro";
+import SpringIcon from "../icons/SpringIcon.astro";
+import StripeIcon from "../icons/StripeIcon.astro";
+
+const TAGS = {
+    SPRING: {
+        name: "Spring Boot",
+        class: "bg-green text-white",
+        icon: SpringIcon
+    },
+    STRIPE: {
+        name: "Stripe",
+        class: "bg-green text-white",
+        icon: StripeIcon
+    },
+    REACT: {
+        name: "React",
+        class: "bg-green text-white",
+        icon: ReactIcon
+
+    },
+    PHP: {
+        name: "PHP",
+        class: "bg-green text-white",
+        icon: PhpIcon
+    }, 
+    JAVASCRIPT:{ 
+        name:"JavaScript",
+        class: "bg-green text-white",
+        icon: JavaScriptIcon
+    },
+    HTML: {
+        name:"HTML",
+        class: "bg-dark text-white",
+        icon: HtmlIcon
+    },
+    CSS: {
+        name:"CSS",
+        class: "bg-dark text-white",
+        icon: CssIcon
+    },
+    CURSOR: {
+        name:"Cursor",
+        class:" text-white",
+        icon:CursorIcon
+    }
+};
+const PROJECTS = [
+    {
+        title: "Sistema Gestion de un Taller Mecánico",
+        description:
+            "Desarrollada con Spring Boot y React. Incluye funcionalidades de gestión de clientes, vehículos, ordenes de trabajo, citas, facturación.Spring security para la autenticación y autorización de roles de empleados. Ademas integra Stripe como pasarela de pago.",
+
+        github: "https://github.com/samarga8/proyecto-taller-mecanico/tree/master",
+        image: "/projects/mechanic.webp",
+        tags: [TAGS.SPRING, TAGS.STRIPE, TAGS.REACT],
+    }
+];
+
+const PROJECT2 = [
+    {
+        title: "RuralGo (En desarrollo)",
+        description: "Página web interactiva enfocada en la promoción y reserva de destinos turísticos en La Canal de Navarrés. Desarrollada con PHP y JavaScript.",
+        github: "https://github.com/samarga8/proyecto-rural_go",
+        image: "/projects/ruralGo.webp",
+        tags: [TAGS.HTML,TAGS.CSS,TAGS.PHP,TAGS.JAVASCRIPT,TAGS.CURSOR]
+    
+    }
+];
+---
+
+{
+    PROJECTS.map(({ image, title, description, tags, github }) => (
+        <article>
+            <div class="flex items-center gap-2 mb-2">
+                <h3 class="text-2xl font-semibold text-white">{title}</h3>
+                <a 
+                href={github} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-gray-300 hover:text-white transition"
+                aria-label="GitHub"
+                >
+                    <GitHubIcon class="size-6 bg-white rounded-full" />
+                </a>
+            </div>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-4 flex-row mt-2 mb-3">
+                {tags.map((tag) => (
+                    <li
+                        class={`flex items-center gap-2 px-3 py-1 rounded ${tag.class}`}
+                    >
+                        <tag.icon />
+                        {tag.name}
+                    </li>
+                ))}
+            </ul>
+            <img
+                class="rounded shadow-2xl shadow-white/10"
+                src={image}
+                alt={`Captura de pantalla del proyecto ${image}`}
+            />
+        </article>
+    ))
+}
+
+{
+    PROJECT2.map(({ image, title, description, tags, github }) => (
+        <article class="mt-8">
+            <div class="flex items-center gap-2 mb-2">
+                <h3 class="text-2xl font-semibold text-white">{title}</h3>
+                <a 
+                href={github} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-gray-300 hover:text-white transition"
+                aria-label="GitHub"
+                >
+                    <GitHubIcon class="size-6 bg-white rounded-full" />
+                </a>
+            </div>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-4 flex-row mt-2 mb-2">
+                {tags.map((tag) => (
+                    <li class={`flex items-center gap-2 px-3 py-1 rounded ${tag.class}`}>
+                        <tag.icon />
+                        {tag.name}
+                    </li>
+                ))}
+            </ul>
+            <img
+                class="rounded shadow-2xl shadow-white/10"
+                src={image}
+                alt={`Captura de pantalla del proyecto ${image}`}
+            />
+        </article>
+    ))
+}
+
