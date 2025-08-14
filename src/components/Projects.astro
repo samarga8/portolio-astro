@@ -9,6 +9,8 @@ import PhpIcon from "../icons/PhpIcon.astro";
 import ReactIcon from "../icons/ReactIcon.astro";
 import SpringIcon from "../icons/SpringIcon.astro";
 import StripeIcon from "../icons/StripeIcon.astro";
+import DockerIcon from "../icons/DockerIcon.astro";
+
 
 const TAGS = {
     SPRING: {
@@ -51,6 +53,12 @@ const TAGS = {
         name:"Cursor",
         class:" text-white",
         icon:CursorIcon
+    },
+    DOCKER: {
+        name:"Docker",
+        class: "bg-dark text-white",
+        icon: DockerIcon
+
     }
 };
 const PROJECTS = [
@@ -58,9 +66,10 @@ const PROJECTS = [
         title: "Sistema Gestion de un Taller Mecánico",
         description:
             "Desarrollada con Spring Boot y React. Incluye funcionalidades de gestión de clientes, vehículos, ordenes de trabajo, citas, facturación.Spring security para la autenticación y autorización de roles de empleados. Ademas integra Stripe como pasarela de pago.",
-        github: "https://github.com/samarga8/proyecto-taller-mecanico/tree/master",
+        github: "https://github.com/samarga8/proyecto-sistema-taller-mecanico/tree/master",
         image: "/projects/mechanic.webp",
-        tags: [TAGS.SPRING, TAGS.STRIPE, TAGS.REACT],
+        tags: [TAGS.SPRING, TAGS.STRIPE, TAGS.REACT,TAGS.DOCKER],
+
     }
 ];
 
