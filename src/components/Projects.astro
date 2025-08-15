@@ -67,7 +67,7 @@ const PROJECTS = [
         description:
             "Desarrollada con Spring Boot y React. Incluye funcionalidades de gestión de clientes, vehículos, ordenes de trabajo, citas, facturación.Spring security para la autenticación y autorización de roles de empleados. Integra Stripe como pasarela de pago y notificaciones por correo electrónico.",
         github: "https://github.com/samarga8/proyecto-sistema-taller-mecanico/tree/master",
-        image: "/projects/mechanic.webp",
+        image: "/projects/facturacion.webp",
         tags: [TAGS.SPRING, TAGS.STRIPE, TAGS.REACT,TAGS.DOCKER],
 
     }
@@ -94,10 +94,11 @@ const PROJECT2 = [
                 href={github} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="text-gray-300 hover:text-white transition"
+                class="text-gray-300 hover:text-white transition relative group"
                 aria-label="GitHub"
                 >
                     <GitHubIcon class="size-6 bg-white rounded-full" />
+                    <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black/80 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Ver proyecto</span>
                 </a>
             </div>
             <p class="text-lg mb-4 text-pretty">{description}</p>
@@ -129,10 +130,11 @@ const PROJECT2 = [
                 href={github} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="text-gray-300 hover:text-white transition"
+                class="text-gray-300 hover:text-white transition relative group"
                 aria-label="GitHub"
                 >
                     <GitHubIcon class="size-6 bg-white rounded-full" />
+                    <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black/80 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Ver proyecto</span>
                 </a>
             </div>
             <p class="text-lg mb-4 text-pretty">{description}</p>
