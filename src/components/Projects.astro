@@ -92,8 +92,8 @@ const PROJECT2 = [
 
 const PROJECT3 = [
     {
-        title: "Sistema de Gestion de examenes",
-        description: "Sistema de exámenes donde los usuarios puedan autenticarse, visualizar instrucciones, iniciar exámenes con tiempo limitado y obtener retroalimentación visual clara",
+        title: "Sistema de un Portal de Exámenes",
+        description: "Portal de exámenes con Spring Boot y Angular. Se implementa autenticación segura usando JWT y gestión de roles. El backend maneja entidades como usuarios, exámenes y preguntas con CRUD completo. El frontend incluye dashboards para administradores y usuarios, con funcionalidades como temporizador y evaluación automática. Aplicación web segura y funcional para gestionar y rendir exámenes",
         github: "https://github.com/samarga8/sistema-gestion-examenes/tree/master",
         image: "/projects/proyect-exam.webp",
         tags: [TAGS.ANGULAR,TAGS.SPRING,TAGS.CURSOR]
@@ -177,6 +177,16 @@ const PROJECT3 = [
         <article class="mt-8">
             <div class="flex items-center gap-2 mb-2">
                 <h3 class="text-2xl font-semibold text-white">{title}</h3>
+                <a 
+                href={github} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-gray-300 hover:text-white transition relative group"
+                aria-label="GitHub"
+                >
+                    <GitHubIcon class="size-6 bg-white rounded-full" />
+                    <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black/80 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Ver proyecto</span>
+                </a>
             </div>
             <p class="text-lg mb-4 text-pretty">{description}</p>
             <ul class="flex gap-4 flex-wrap mt-2 mb-2">
