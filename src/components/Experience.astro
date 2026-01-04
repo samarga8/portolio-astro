@@ -1,31 +1,28 @@
-
 ---
-import ExperiencieItems from "./ExperiencieItems.astro"
+import ExperiencieItems from "./ExperiencieItems.astro";
 
 const experiences = [
     {
         title: "IES Simarro (Xativa)",
 
-        description: "Desarrollo de Aplicaciones Multiplataforma (Grado Superior).",   
+        description:
+            "Desarrollo de Aplicaciones Multiplataforma (Grado Superior).",
         date: "Septiembre 2023 - Junio 2025",
     },
     {
-        title: "FCTs en Geinfor ",
-        description: "Testing con cypress de componenetes Angular del ERP web de la empresa y manejo de datos desde la base de datos.",
-        date: "Octubre 2025 - Enero 2026",
+        title: "FCTs en Geinfor",
+        description:"Testing de componentes Angular con Cypress en el ERP web de la empresa, incluyendo gestión y validación de datos desde la base de datos.",
+        date: "Octubre 2025 – Enero 2026",
     },
-    
-]
+];
 ---
-<ol class="relative border-s border-gray-200 ml-3">      
+
+<ol class="relative border-s border-gray-200 ml-3">
     {
         experiences.map((experience) => (
             <li class="mb-10 ms-4">
                 <ExperiencieItems {...experience} />
             </li>
         ))
-    
-    }            
-   
+    }
 </ol>
-
